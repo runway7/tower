@@ -1,0 +1,30 @@
+body {
+  font-size: 16px;  
+  line-height: 1.618;
+
+}
+
+header {
+  h1 {
+    font-family: 'Play';
+    text-transform: uppercase;
+  }
+}
+
+header {
+  .tagline {
+    font-size: 1.618rem;    
+    color: #666;
+  }
+  border-bottom: thin solid #ccc;
+  padding: 1.618rem;
+  padding-bottom: 1.618rem;
+  margin-bottom: 1.618rem;
+  background: rgba(0,0,0,0.05);
+}
+
+.signin {
+  background: #eee;
+  padding: 0.618rem;
+  border-radius: 0.618em;
+}

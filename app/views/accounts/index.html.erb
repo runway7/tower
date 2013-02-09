@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Accounts Owned</h3>
+  <% if @accounts.empty? %>
+  <p>You have no accounts. <a href="<%=new_account_path%>">Create one.</a></p>
+  <% end %>
+  
+</div>

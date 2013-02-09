@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tower_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tower_test
+  host: localhost
