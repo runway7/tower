@@ -1,7 +1,16 @@
 <div class="container">
   <h3>Accounts Owned</h3>
+  <hr/>
   <% if @accounts.empty? %>
-  <p>You have no accounts. <a href="<%=new_account_path%>">Create one.</a></p>
+  <p>You have no accounts.</p>
   <% end %>
+  <% @accounts.each do |account| %>
+    <div>
+      <div><a href="<%=account_path(account)%>"><%=account.name%> (<%=account.keys.size%> keys)</a></div>
+    </div>
+    
+  <% end %>
+  <hr/>
+  <a href="<%=new_account_path(@account)%>" class="btn">Create Account</a>
   
 </div>

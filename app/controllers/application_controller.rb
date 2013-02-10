@@ -16,5 +16,6 @@ class ApplicationController < ActionController::Base
       render text: 'FORBIDDEN', status: 403 
       return false
     end
+    @current_user = current_user
   end
 end

@@ -1,6 +1,8 @@
 Tower::Application.routes.draw do
-  resources :accounts
-  resources :keys
+  resources :accounts do 
+    resources :keys
+  end
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,7 +10,8 @@ Tower::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'home#index'
   post '/auth/:provider/callback', to: 'home#login'
-  get '/auth/logout', to: 'home#logout'
+  get '/auth/logout', to: 'home#logout', as: :logout
+  get '/auth/persona', as: :login
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Create a New Key | Account: <%=@account.name%></h3>
+  <hr/>
+  <%= form_tag(account_keys_url(@account), :method => "POST") do %>
+  <fieldset>
+    <div class="row">
+      <div class="span6">
+        <%= text_field_tag(:name, nil, {placeholder: 'Key Name', class: 'span6'}) %>
+        <span class="help-block">
+          Each API key is tracked individually and together under the associated account.
+        </span>
+        <button type="submit" class="btn">Create</button>
+      </div>
+      <div class="span6"></div>
+    </div>
+  </fieldset>
+  <% end %></div>

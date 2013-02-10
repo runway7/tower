@@ -1,7 +1,12 @@
 body {
   font-size: 16px;  
   line-height: 1.618;
+  font-family: 'Ubuntu';
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Play';
 }
 
 header {
@@ -16,11 +21,18 @@ header {
     font-size: 1.618rem;    
     color: #666;
   }
+  h1 {
+    
+  }
   border-bottom: thin solid #ccc;
   padding: 1.618rem;
   padding-bottom: 1.618rem;
   margin-bottom: 1.618rem;
   background: rgba(0,0,0,0.05);
+  .loginfo {
+    text-align: right;  
+    float: right;
+  }
 }
 
 .signin {
@@ -28,3 +40,4 @@ header {
   padding: 0.618rem;
   border-radius: 0.618em;
 }
+

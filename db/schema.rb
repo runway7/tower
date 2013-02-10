@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20130209054524) do
   end
 
   create_table "keys", force: true do |t|
+    t.string   "name",       null: false
     t.string   "uid",        null: false
     t.string   "secret",     null: false
     t.integer  "account_id", null: false
@@ -34,9 +35,9 @@ ActiveRecord::Schema.define(version: 20130209054524) do
   end
 
   create_table "permissions", force: true do |t|
-    t.integer  "account_id"
-    t.integer  "login_id"
-    t.boolean  "owner"
+    t.integer  "account_id",                 null: false
+    t.integer  "login_id",                   null: false
+    t.boolean  "owner",      default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

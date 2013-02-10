@@ -1,0 +1,17 @@
+<div class="container">
+  <a href="<%=accounts_path%>"><- Back to accounts</a>
+  <h3>Account Details: <%=@account.name%></h3>
+  <% if @account.keys.empty? %>
+  <p>You have no API keys in this account.</p>
+  <% end %>
+  <div class="key-listing">
+  <% @account.keys.each do |key| %>
+    <div class="key">
+      <div class="name"><%=key.name%></div>
+      <div><span class="heading">ID:</span>&nbsp;<span class="code"><%=key.uid%></span></div>
+      <div><span class="heading">Secret:</span>&nbsp;<span class="code"><%=key.secret%></span></div>    
+    </div>
+  <% end %>
+  </div>    
+  <a href="<%=new_account_key_path(@account)%>" class="btn">Create a new API Key</a>
+</div>

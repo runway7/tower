@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Create a New Account</h3>
+  <hr/>
+  <%= form_tag(accounts_url, :method => "POST") do %>
+  <fieldset>
+    <div class="row">
+      <div class="span6">
+        <%= text_field_tag(:name, nil, {placeholder: 'Account Name', class: 'span6', required: 'required'}) %>
+        <span class="help-block">
+          Each account can have a collection of API keys which and tracked separately and together at an account level.
+        </span>
+        <button type="submit" class="btn">Create</button> or <a href="<%=account_path(@account)%>">cancel</a>
+      </div>
+      <div class="span6"></div>
+    </div>
+  </fieldset>
+  <% end %></div>
