@@ -1,4 +1,4 @@
-class AccountsController < ApplicationController  
+class AccountsController < ApplicationController
   def index
     @accounts = current_user.accounts
   end
@@ -13,10 +13,10 @@ class AccountsController < ApplicationController
       Permission.create! account: account, login: current_user, owner: true
       redirect_to account_url account
     end
-    
+
   end
 
-  def show 
+  def show
     @account = Account.find params[:id]
   end
 end

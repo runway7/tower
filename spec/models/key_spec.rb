@@ -9,7 +9,7 @@ describe Key do
 
     key = Key.create account: account, name: 'key1'
     key.uid.should == "uniqueid"
-    key.secret.should == Digest::SHA512.new.update('abc').hexdigest()
+    key.secret.should == Digest::SHA256.new.update('abc').hexdigest()
   end
 
   it 'should maintain uniqueness of uids' do
@@ -18,7 +18,7 @@ describe Key do
     key.errors.messages.should include uid: ['has already been taken' ]
   end
 
-  it 'should provide a combined token' do 
+  it 'should provide a combined token' do
     key = Key.create! account: account, uid: 'abc', secret: 'secret', name: 'key1'
     key.token.should == 'abcsecret'
   end

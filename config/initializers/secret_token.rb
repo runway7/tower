@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
 
 # Make sure the secret is at least 30 characters and all random,
@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Tower::Application.config.secret_key_base = '137a8e8255e8cd5aa0c63bc618a3f5ba9111c0b31f75bbaaa50f66ead594a0f0449ba3aeb7cd722226acab3f890906eeb46758d1fbe622012169728ae546800c'
+Tower::Application.config.secret_key_base = '09a8f489f506abbbbe073de1534abfab1d575bf6ea9347eb7fdc2615955b11888ce33c2ebf2e5a35a62a39f74c05f74f6102ac2a3b432edced43cd4c2d483ae0'

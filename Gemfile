@@ -1,36 +1,28 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
-gem 'rails',     github: 'rails/rails'
-gem 'arel',      github: 'rails/arel'
-
+gem 'rails', '4.0.0.rc1'
 gem 'pg'
-
-group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
-  gem 'bootstrap-sass-rails'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass-rails'
-end
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
-gem 'omniauth-persona'
-
 gem 'turbolinks'
-
 gem 'jbuilder', '~> 1.0.1'
+gem 'bootstrap-sass-rails'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
+group :doc do
+  gem 'sdoc', require: false
 end
 
-group :development do
+gem 'unicorn'
+gem 'omniauth-persona'
+
+group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  gem 'rack-mini-profiler'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
-gem 'rack-mini-profiler'
